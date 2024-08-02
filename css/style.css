@@ -1,0 +1,228 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    color: #333;
+    background-color: #f4f5f7;
+    /*f9f9f9*/
+    font-size: 1.25em;
+    /* デフォルトより大きなフォントサイズ */
+    line-height: 2em;
+    /* デフォルトより大きな行間 */
+}
+
+h1 {
+    color: #444;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #666;
+}
+
+/* リンクハイライト */
+a {
+    color: #0077cc;
+    text-decoration: none;
+    border-bottom: solid 2px;
+    font-weight: bold;
+}
+
+.cp_link {
+    display: inline;
+    padding: 0.1em 0.3em;
+    transition: all 0.3s;
+}
+
+.cp_link:hover {
+    color: #fff;
+    background-color: #0077cc;
+    /*#00BCD4*/
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* 大型モニターに対応するためのCSS */
+.container {
+    max-width: 1500px;
+    /* 最大幅を設定 */
+    margin: 0 auto;
+    /* 左右のマージンを自動で中央揃え */
+    padding: 0 15px;
+    /* 必要に応じてパディングを設定 */
+}
+
+/* 背景色と矢印付きのボタン */
+.button01 a {
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: inline-flex;
+    /* inline-flexに変更 */
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    min-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.button01 a:hover {
+    background: #313131;
+    color: #fff;
+}
+
+.button01 a:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+
+.button01 a:hover:after {
+    border-color: #fff;
+}
+
+/* 水平方向にリンクを配置するための追加のCSS */
+.button01 .horizontal-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button01 .horizontal-links a:not(:last-child) {
+    margin-right: 20px;
+    /* Adjust spacing as needed */
+}
+
+/* ツールの説明を左、ボタンを右に配置するためのCSS */
+.tool-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.tool-description {
+    grid-column: 1 / 2;
+    /* 1番目のカラムに配置 */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tool-buttons {
+    grid-column: 2 / 3;
+    /* 2番目のカラムに配置 */
+    padding-left: 20px;
+    margin: 0 auto;
+}
+
+/* 「新着情報」に関するデザイン */
+.news-date {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* スクロール可能なリスト (新着情報に使用) */
+.scrollable-list {
+    height: 500px;
+    /* 好みの高さに設定 */
+    overflow-y: auto;
+    /* 垂直方向のスクロールバーを有効にする */
+}
+
+.scrollable-list li p {
+    margin-bottom: 10px;
+    /* ニュース項目間のスペース */
+}
+
+.scrollable-list li p:last-child {
+    border-bottom: none;
+    /* 最後の項目のセパレータを削除 */
+}
+
+/* デフォルト（PC用）のサイズ */
+.responsive {
+    width: 80%;
+}
+
+/* スマートフォン用のサイズ */
+@media (max-width: 600px) {
+    .responsive {
+        width: 100%;
+        margin: auto;
+        /* 左右のマージンを自動で設定し中央揃えに */
+        display: block;
+        /* 画像をブロックレベル要素として扱う */
+    }
+
+    /* ボタンのサイズを調整 */
+    .button01 a {
+        min-width: 80%;
+    }
+
+    /* 水平方向にリンクを配置するための追加のCSS */
+    .button01 .horizontal-links {
+        display: block;
+        /* flexからblockに変更して垂直方向に表示 */
+    }
+
+    .button01 .horizontal-links a:not(:last-child) {
+        margin-right: 0;
+        /* 水平方向の間隔を削除 */
+        margin-bottom: 10px;
+        /* 垂直方向の間隔を追加 */
+    }
+
+    /* 「ツール一覧」を左右分割表示ではなく、一列に表示ためのCSS */
+    .tool-item {
+        display: block;
+        /* グリッドをオフにしてブロック表示に */
+        padding: 20px;
+        /* 必要に応じてパディングを再設定 */
+    }
+
+    .tool-description,
+    .tool-buttons {
+        grid-column: auto;
+        /* グリッドの設定をリセット */
+    }
+
+    .tool-buttons {
+        padding-left: 0;
+        /* スマートフォン表示では左のパディングをリセット */
+    }
+}
