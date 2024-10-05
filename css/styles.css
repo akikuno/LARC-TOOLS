@@ -3,43 +3,26 @@ body {
     margin: 40px;
     color: #333;
     background-color: #f4f5f7;
-    /*f9f9f9*/
     font-size: 1.25em;
-    /* デフォルトより大きなフォントサイズ */
     line-height: 2em;
-    /* デフォルトより大きな行間 */
+}
+
+header {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    text-align: center;
 }
 
 h1 {
-    color: #444;
+    color: #333;
     border-bottom: 2px solid #ddd;
     padding-bottom: 15px;
     margin-bottom: 20px;
-}
-
-h3 {
-    margin-top: 0;
-    color: #666;
-}
-
-/* リンクハイライト */
-a {
-    color: #0077cc;
-    text-decoration: none;
-    border-bottom: solid 2px;
-    font-weight: bold;
-}
-
-.cp_link {
-    display: inline;
-    padding: 0.1em 0.3em;
-    transition: all 0.3s;
-}
-
-.cp_link:hover {
-    color: #fff;
-    background-color: #0077cc;
-    /*#00BCD4*/
 }
 
 ul {
@@ -55,34 +38,48 @@ li {
     margin-bottom: 20px;
 }
 
-header {
-    font-size: 0.8em;
-    text-align: center;
+
+/* ================================================= */
+/* リンクハイライト */
+/* ================================================= */
+a {
+    color: #0077cc;
+    text-decoration: none;
+    border-bottom: solid 2px;
+    font-weight: bold;
 }
 
-footer {
-    margin-top: 40px;
-    font-size: 0.9em;
-    text-align: center;
+.text_link {
+    display: inline;
+    padding: 0.1em 0.3em;
+    transition: all 0.3s;
 }
 
-/* 大型モニターに対応するためのCSS */
+.text_link:hover {
+    color: #fff;
+    background-color: #0077cc;
+}
+
+
+
+/* ================================================= */
+/* 大型モニターに対応 */
+/* ================================================= */
 .container {
     max-width: 1500px;
-    /* 最大幅を設定 */
     margin: 0 auto;
-    /* 左右のマージンを自動で中央揃え */
     padding: 0 15px;
-    /* 必要に応じてパディングを設定 */
 }
 
+/* ================================================= */
 /* 背景色と矢印付きのボタン */
+/* ================================================= */
+
 .button01 a {
     background: #eee;
     border-radius: 3px;
     position: relative;
     display: inline-flex;
-    /* inline-flexに変更 */
     justify-content: space-around;
     align-items: center;
     margin: 0;
@@ -94,7 +91,7 @@ footer {
 }
 
 .button01 a:hover {
-    background: #313131;
+    background: #0077cc;
     color: #fff;
 }
 
@@ -102,8 +99,8 @@ footer {
     content: "";
     width: 5px;
     height: 5px;
-    border-top: 3px solid #313131;
-    border-right: 3px solid #313131;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
     transform: rotate(45deg) translateY(-50%);
     position: absolute;
     top: 50%;
@@ -125,8 +122,11 @@ footer {
 
 .button01 .horizontal-links a:not(:last-child) {
     margin-right: 20px;
-    /* Adjust spacing as needed */
 }
+
+/* ================================================= */
+/* ツール一覧 */
+/* ================================================= */
 
 /* ツールの説明を左、ボタンを右に配置するためのCSS */
 .tool-item {
@@ -136,52 +136,52 @@ footer {
     align-items: center;
 }
 
+/* 1番目のカラムに配置 */
 .tool-description {
     grid-column: 1 / 2;
-    /* 1番目のカラムに配置 */
     margin: 0 auto;
     padding: 20px;
 }
 
+/* 2番目のカラムに配置 */
 .tool-buttons {
     grid-column: 2 / 3;
-    /* 2番目のカラムに配置 */
     padding-left: 20px;
     margin: 0 auto;
 }
 
-/* 「新着情報」に関するデザイン */
+/* ================================================= */
+/* 新着情報 */
+/* ================================================= */
 .news-date {
     font-weight: bold;
     font-size: 1.5em;
 }
 
-/* スクロール可能なリスト (新着情報に使用) */
 .scrollable-list {
-    height: 500px;
-    /* 好みの高さに設定 */
+    height: 1000px;
     overflow-y: auto;
-    /* 垂直方向のスクロールバーを有効にする */
 }
 
 .scrollable-list li p {
     margin-bottom: 10px;
-    /* ニュース項目間のスペース */
 }
 
+/* 最後の項目のセパレータを削除 */
 .scrollable-list li p:last-child {
     border-bottom: none;
-    /* 最後の項目のセパレータを削除 */
 }
+
+
+/* ================================================= */
+/* レスポンシブデザイン */
+/* ================================================= */
 
 /* デフォルト（PC用）のサイズ */
 .responsive {
     width: 80%;
 }
 
-/* ================================================= */
-/* スマートフォン用のサイズ */
-/* ================================================= */
 @media (max-width: 600px) {
     .responsive {
         width: 100%;
@@ -233,39 +233,51 @@ footer {
 /* ================================================= */
 /* タブボタン */
 /* ================================================= */
+
 .tab {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #f4f5f7;
     margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    border-radius: 8px 8px 0 0;
 }
 
 .tab button {
-    background-color: inherit;
-    float: left;
+    background-color: #fff;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+    padding: 14px 20px;
     font-size: 17px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tab button:hover {
-    color: white;
-    background-color: #313131;
+    background-color: #0077cc;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .tab button.active {
-    color: white;
-    background-color: #313131;
+    background-color: #0077cc;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Style the tab content */
+/* Updated Tab Content */
 .tabcontent {
     display: none;
     padding: 20px;
-    border-top: none;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
 }
+
 
 /* ================================================= */
 /* メンバー紹介 */
