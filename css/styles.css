@@ -231,7 +231,7 @@ footer {
 
 
 /* ================================================= */
-/* Style the tab buttons */
+/* タブボタン */
 /* ================================================= */
 .tab {
     overflow: hidden;
@@ -268,24 +268,20 @@ footer {
 }
 
 /* ================================================= */
-/* メンバー紹介のCSS */
+/* メンバー紹介 */
 /* ================================================= */
-/* モダンなメンバープロフィールスタイル */
+
 .member-profile {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .member-profile:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-} */
 
 .member-profile h2 {
     font-size: 2em;
@@ -311,6 +307,11 @@ footer {
 
 .member-links li {
     display: inline-block;
+    background-color: #fefefe;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    margin-bottom: 10px;
 }
 
 .member-links a {
@@ -328,4 +329,25 @@ footer {
     background-color: #0077cc;
     color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
+}
+
+
+@media (max-width: 600px) {
+    .member-links {
+        display: block;
+        text-align: center;
+    }
+
+    .member-links li {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px 0;
+    }
+
+    .member-links a {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
 }
