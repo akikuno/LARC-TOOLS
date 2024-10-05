@@ -179,7 +179,9 @@ footer {
     width: 80%;
 }
 
+/* ================================================= */
 /* スマートフォン用のサイズ */
+/* ================================================= */
 @media (max-width: 600px) {
     .responsive {
         width: 100%;
@@ -225,4 +227,105 @@ footer {
         padding-left: 0;
         /* スマートフォン表示では左のパディングをリセット */
     }
+}
+
+
+/* ================================================= */
+/* Style the tab buttons */
+/* ================================================= */
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover {
+    color: white;
+    background-color: #313131;
+}
+
+.tab button.active {
+    color: white;
+    background-color: #313131;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+/* ================================================= */
+/* メンバー紹介のCSS */
+/* ================================================= */
+/* モダンなメンバープロフィールスタイル */
+.member-profile {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .member-profile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+} */
+
+.member-profile h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.member-profile p {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.member-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.member-links li {
+    display: inline-block;
+}
+
+.member-links a {
+    font-size: 1.1em;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #0077cc;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-links a:hover {
+    background-color: #0077cc;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
 }

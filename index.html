@@ -1,72 +1,71 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <!--
+<!--
     最終更新者：久野 朗広 Akihiro Kuno (akuno[at]md.tsukuba.ac.jp)
-    最終更新日: 2024-08-02
+    最終更新日: 2024-10-05
     -->
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-29Y2VM34B3"></script>
-        <script src="js/scripts.js"></script>
 
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="icon"
-            href="https://raw.githubusercontent.com/akikuno/logos/main/icons/mouse-favicon-dalle.png"
-            type="image/png"
-            sizes="256x256"
-        />
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-29Y2VM34B3"></script>
+    <script src="js/scripts.js"></script>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/sanitize.css" />
-        <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://raw.githubusercontent.com/akikuno/logos/main/icons/mouse-favicon-dalle.png"
+        type="image/png" sizes="256x256" />
 
-        <title>LARC-TOOLS</title>
-    </head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/sanitize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <body>
-        <div class="container">
-            <header>
-                <h1>
-                    筑波大学生命科学動物資源センター 開発ツール一覧
-                    <br />
-                    Tools Developed by the Laboratory of Animal Resource Center
-                </h1>
-            </header>
+    <title>LARC-TOOLS</title>
+</head>
 
-            <p>
-                <a
-                    class="cp_link"
-                    href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/"
-                    target="_blank"
-                    class="link-highright"
-                    >筑波大学生命科学動物資源センター</a
-                >では、遺伝子改変の質の向上を通して、より適正な動物実験を行うための支援ツールの開発に取り組んでいます
+<!-- ============================================================  -->
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>
+                筑波大学生命科学動物資源センター 開発ツール一覧
                 <br />
-                <a
-                    class="cp_link"
-                    href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/public_E/index.html"
-                    target="_blank"
-                    class="link-highright"
-                    >The Laboratory of Animal Resource Center, University of Tsukuba</a
-                >
-                is developing support tools to enhance the quality of genetically modified organisms, aiming to
-                facilitate more appropriate and ethical animal experimentation
-            </p>
+                Tools Developed by the Laboratory of Animal Resource Center
+            </h1>
+        </header>
 
-            <!--  ================================================== -->
+        <p>
+            <a class="cp_link" href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/" target="_blank"
+                class="link-highright">筑波大学生命科学動物資源センター</a>では、遺伝子改変の質の向上を通して、より適正な動物実験を行うための支援ツールの開発に取り組んでいます
+            <br />
+            <a class="cp_link" href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/public_E/index.html" target="_blank"
+                class="link-highright">The Laboratory of Animal Resource Center, University of Tsukuba</a>
+            is developing support tools to enhance the quality of genetically modified organisms, aiming to
+            facilitate more appropriate and ethical animal experimentation
+        </p>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Tools')">ツール一覧 Tools</button>
+            <button class="tablinks" onclick="openTab(event, 'News')">新着情報 News</button>
+            <button class="tablinks" onclick="openTab(event, 'Members')">メンバー紹介 Members</button>
+            <button class="tablinks" onclick="openTab(event, 'Links')">関連リンク Related Links</button>
+
+        </div>
+
+        <!--  ================================================== -->
+        <!--  ツール一覧 -->
+        <!--  ================================================== -->
+
+        <div id="Tools" class="tabcontent">
             <h1 id="tools" onclick="copyLinkToClipboard('tools')" style="cursor: pointer">🔗 ツール一覧 Tools</h1>
             <section>
                 <ul>
                     <!-- 👇️ ここから 👇️ -->
                     <li id="KOnezumi" class="tool-item">
                         <div class="tool-description">
-                            <img
-                                src="https://raw.githubusercontent.com/akikuno/logos/main/KOnezumi/KOnezumi-logo.png"
-                                alt="KOnezumi"
-                                class="responsive"
-                            />
+                            <img src="https://raw.githubusercontent.com/akikuno/logos/main/KOnezumi/KOnezumi-logo.png"
+                                alt="KOnezumi" class="responsive" />
                             <p>
                                 CRISPR-Cas9を用いたノックアウトマウスの作製支援Webツールです
                                 <br />
@@ -76,25 +75,20 @@
                         <div class="tool-buttons">
                             <div class="button01">
                                 <p>
-                                    <a
-                                        href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/KOanimals/konezumi.html"
-                                        target="_blank"
-                                        >Webサイト / Web site</a
-                                    >
+                                    <a href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/KOanimals/konezumi.html"
+                                        target="_blank">Webサイト / Web site</a>
                                 </p>
                             </div>
                             <div class="button01">
                                 <p>
-                                    <a href="https://doi.org/10.1093/bioinformatics/btz090" target="_blank"
-                                        >論文 / Article</a
-                                    >
+                                    <a href="https://doi.org/10.1093/bioinformatics/btz090" target="_blank">論文 /
+                                        Article</a>
                                 </p>
                             </div>
                             <div class="button01">
                                 <p>
-                                    <a href="https://sg.idtdna.com/jp/site/Interview04.html" target="_blank"
-                                        >開発者インタビュー（日本語）</a
-                                    >
+                                    <a href="https://sg.idtdna.com/jp/site/Interview04.html"
+                                        target="_blank">開発者インタビュー（日本語）</a>
                                 </p>
                             </div>
                         </div>
@@ -104,11 +98,8 @@
                     <!-- 👇️ ここから 👇️ -->
                     <li id="DAJIN2" class="tool-item">
                         <div class="tool-description">
-                            <img
-                                src="https://raw.githubusercontent.com/akikuno/logos/main/DAJIN2/DAJIN2-logo-drjekyll-trim.png"
-                                alt="DAJIN2"
-                                class="responsive"
-                            />
+                            <img src="https://raw.githubusercontent.com/akikuno/logos/main/DAJIN2/DAJIN2-logo-drjekyll-trim.png"
+                                alt="DAJIN2" class="responsive" />
                             <p>
                                 ナノポアターゲットシーケンシングを用いた、ゲノム編集サンプルの遺伝型解析ツールです
                                 <br />
@@ -118,25 +109,20 @@
                         <div class="tool-buttons">
                             <div class="button01">
                                 <p>
-                                    <a href="https://github.com/akikuno/DAJIN2/blob/main/README.md" target="_blank"
-                                        >GitHub</a
-                                    >
+                                    <a href="https://github.com/akikuno/DAJIN2/blob/main/README.md"
+                                        target="_blank">GitHub</a>
                                 </p>
                             </div>
                             <div class="button01">
                                 <p>
-                                    <a href="https://doi.org/10.1371/journal.pbio.3001507" target="_blank"
-                                        >論文 / Article</a
-                                    >
+                                    <a href="https://doi.org/10.1371/journal.pbio.3001507" target="_blank">論文 /
+                                        Article</a>
                                 </p>
                             </div>
                             <div class="button01">
                                 <p>
-                                    <a
-                                        href="https://www.tsukuba.ac.jp/journal/medicine-health/20220119040000.html"
-                                        target="_blank"
-                                        >プレスリリース（日本語）</a
-                                    >
+                                    <a href="https://www.tsukuba.ac.jp/journal/medicine-health/20220119040000.html"
+                                        target="_blank">プレスリリース（日本語）</a>
                                 </p>
                             </div>
                         </div>
@@ -146,11 +132,8 @@
                     <!-- 👇️ ここから 👇️ -->
                     <li id="cstag" class="tool-item">
                         <div class="tool-description">
-                            <img
-                                src="https://raw.githubusercontent.com/akikuno/logos/main/cstag/cstag-logo-microgramma.png"
-                                alt="cstag"
-                                class="responsive"
-                            />
+                            <img src="https://raw.githubusercontent.com/akikuno/logos/main/cstag/cstag-logo-microgramma.png"
+                                alt="cstag" class="responsive" />
                             <p>
                                 変異情報を操作・可視化するツールです
                                 <br />
@@ -160,9 +143,8 @@
                         <div class="tool-buttons">
                             <div class="button01">
                                 <p>
-                                    <a href="https://github.com/akikuno/cstag/blob/main/README.md" target="_blank"
-                                        >GitHub</a
-                                    >
+                                    <a href="https://github.com/akikuno/cstag/blob/main/README.md"
+                                        target="_blank">GitHub</a>
                                 </p>
                             </div>
                             <div class="button01">
@@ -175,9 +157,13 @@
                     <!-- 👆️ ここまで 👆️-->
                 </ul>
             </section>
+        </div>
 
-            <!--  ================================================== -->
+        <!--  ================================================== -->
+        <!--  新着情報 -->
+        <!--  ================================================== -->
 
+        <div id="News" class="tabcontent">
             <h1 id="news" onclick="copyLinkToClipboard('news')" style="cursor: pointer">🔗 新着情報 News</h1>
             <ul class="scrollable-list">
                 <li>
@@ -192,17 +178,15 @@
                     </p>
                     <div class="button01">
                         <p>
-                            <a
-                                href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(24)00206-6"
-                                target="_blank"
-                                >論文 / Article
+                            <a href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(24)00206-6"
+                                target="_blank">論文 / Article
                             </a>
                         </p>
                     </div>
                     <div class="button01">
                         <p>
-                            <a href="https://www.ims.u-tokyo.ac.jp/imsut/jp/about/press/page_00292.html" target="_blank"
-                                >プレスリリース（日本語）
+                            <a href="https://www.ims.u-tokyo.ac.jp/imsut/jp/about/press/page_00292.html"
+                                target="_blank">プレスリリース（日本語）
                             </a>
                         </p>
                     </div>
@@ -212,14 +196,15 @@
                     <!-- 👇️ ここから 👇️ -->
                     <p class="news-date">2024-06-18</p>
                     <p>
-                        <a href="https://jsgedit.jp/meeting/09/index.php" target="_blank"> 第9回日本ゲノム編集学会</a
-                        >にて、滝大斗さんが「Target-AID による多重
+                        <a href="https://jsgedit.jp/meeting/09/index.php" target="_blank">
+                            第9回日本ゲノム編集学会</a>にて、滝大斗さんが「Target-AID による多重
                         KOマウス作製デザインを自動化するKOnezumi-AIDの開発」、久野朗広研究員が「CRISPR-Cas
                         を用いたゲノム編集によって生じる複雑な遺伝型を解き明かすDAJIN2の開発」のテーマでポスター発表を行いました
                     </p>
                     <div class="button01">
-                        <a href="https://researchmap.jp/7000027584/presentations/46839828" target="_blank"
-                            >DAJIN2のポスターリンク (Researchmap)
+                        <a href="https://researchmap.jp/7000027584/presentations/46839828"
+                            target="_blank">DAJIN2のポスターリンク
+                            (Researchmap)
                         </a>
                     </div>
                     <hr />
@@ -228,15 +213,13 @@
                     <!-- 👇️ ここから 👇️ -->
                     <p class="news-date">2024-01-30</p>
                     <p>
-                        <a href="https://www.nichidokyo.or.jp/labio21.html" target="_blank"
-                            >日本実験動物協会情報誌 LABIO21</a
-                        >に、久野朗広助教の寄稿文「質の高いゲノム編集マウス作製を支援するKOnezumi,
+                        <a href="https://www.nichidokyo.or.jp/labio21.html" target="_blank">日本実験動物協会情報誌
+                            LABIO21</a>に、久野朗広助教の寄稿文「質の高いゲノム編集マウス作製を支援するKOnezumi,
                         DAJINの開発」が掲載されました
                     </p>
                     <div class="button01">
-                        <a href="https://www.nichidokyo.or.jp/labio/LABIO21_No.91_p.22_25.pdf" target="_blank"
-                            >記事（日本語）</a
-                        >
+                        <a href="https://www.nichidokyo.or.jp/labio/LABIO21_No.91_p.22_25.pdf"
+                            target="_blank">記事（日本語）</a>
                     </div>
                     <hr />
                     <!-- 👆️ ここまで 👆️-->
@@ -247,9 +230,64 @@
                     <!-- 👆️ ここまで 👆️-->
                 </li>
             </ul>
+        </div>
+        <!--  ================================================== -->
+        <!--  メンバー紹介 -->
+        <!--  ================================================== -->
+        <div id="Members" class="tabcontent">
+            <h1 id="members" onclick="copyLinkToClipboard('members')" style="cursor: pointer">
+                🔗 メンバー紹介 Members
+            </h1>
+            <div class="member-profile">
+                <!-- 👇️ ここから 👇️ -->
+                <h2>久野 朗広 / Akihiro KUNO</h2>
+                <p>勉強と育児と筋トレが大好きです</p>
+                <ul class="member-links">
+                    <li>
+                        <a href="https://github.com/akikuno" target="_blank">
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/akicuno" target="_blank">
+                            X
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://researchmap.jp/7000027584" target="_blank">
+                            Researchmap
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <!-- 👆️ ここまで 👆️-->
 
-            <!--  ================================================== -->
+            <!-- 👇️ ここから 👇️ -->
+            <div class="member-profile">
+                <h2>滝 大斗 / Taito TAKI</h2>
+                <p>ひとこと</p>
+                <ul class="member-links">
+                    <li>
+                        <a href="https://github.com/aki2274" target="_blank">
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://example.com" target="_blank">
+                            X
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <!-- 👆️ ここまで 👆️-->
+        </div>
+        <!--  ================================================== -->
+        <!--  関連リンク -->
+        <!--  ================================================== -->
 
+        <div id="Links" class="tabcontent">
             <h1 id="related-links" onclick="copyLinkToClipboard('related-links')" style="cursor: pointer">
                 🔗 関連リンク Related Links
             </h1>
@@ -257,41 +295,63 @@
                 <li>
                     <div class="button01">
                         <p>
-                            <a href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/sakusei.html" target="_blank"
-                                >筑波大学生命科学動物資源センター 遺伝子改変マウス作製事業</a
-                            >
+                            <a href="https://www.md.tsukuba.ac.jp/LabAnimalResCNT/sakusei.html"
+                                target="_blank">筑波大学生命科学動物資源センター 遺伝子改変マウス作製事業</a>
                         </p>
                     </div>
 
                     <div class="button01">
                         <p class="horizontal-links">
-                            <a href="https://www.md.tsukuba.ac.jp/basic-med/anatomy/embryology/" target="_blank"
-                                >筑波大学解剖学発生学研究室</a
-                            >
-                            <a
-                                href="https://www.md.tsukuba.ac.jp/basic-med/anatomy/embryology/index_e.html"
-                                target="_blank"
-                                >Department of Anatomy and Embryology</a
-                            >
+                            <a href="https://www.md.tsukuba.ac.jp/basic-med/anatomy/embryology/"
+                                target="_blank">筑波大学解剖学発生学研究室</a>
+                            <a href="https://www.md.tsukuba.ac.jp/basic-med/anatomy/embryology/index_e.html"
+                                target="_blank">Department of Anatomy and Embryology</a>
                         </p>
                     </div>
 
                     <div class="button01">
                         <p class="horizontal-links">
-                            <a href="https://www.md.tsukuba.ac.jp/basic-med/lab-animal/" target="_blank"
-                                >筑波大学実験動物学研究室</a
-                            >
-                            <a href="https://www.md.tsukuba.ac.jp/basic-med/lab-animal/indexEn.html" target="_blank"
-                                >Laboratory Animal Science</a
-                            >
+                            <a href="https://www.md.tsukuba.ac.jp/basic-med/lab-animal/"
+                                target="_blank">筑波大学実験動物学研究室</a>
+                            <a href="https://www.md.tsukuba.ac.jp/basic-med/lab-animal/indexEn.html"
+                                target="_blank">Laboratory Animal Science</a>
                         </p>
                     </div>
                 </li>
             </ul>
-
-            <footer>
-                <p>&copy;2024 筑波大学生命科学動物資源センター</p>
-            </footer>
         </div>
-    </body>
+
+        <!--  ================================================== -->
+        <footer>
+            <p>&copy;2024 筑波大学生命科学動物資源センター</p>
+        </footer>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the "active" class from all tab links
+            var tablinks = document.getElementsByClassName("tablinks");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab's content and add "active" class to the clicked tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Set default tab to open (e.g., "Tools")
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("Tools").style.display = "block";
+        });
+    </script>
+
+</body>
+
 </html>
