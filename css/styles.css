@@ -31,6 +31,11 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -71,11 +76,59 @@ a {
 /* ================================================= */
 /* 大型モニターに対応 */
 /* ================================================= */
+
 .container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+/* ================================================= */
+/* タブボタン */
+/* ================================================= */
+
+.tab {
+    overflow: hidden;
+    background-color: #eee;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.tab button {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    font-size: 17px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border-radius: 8px 8px 8px 8px;
+    margin: 5px;
+}
+
+.tab button:hover {
+    background-color: #0077cc;
+    color: #fff;
+    border-color: #0077cc;
+}
+
+.tab button.active {
+    background-color: #0077cc;
+    color: #fff;
+    border-color: #0077cc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+
 
 /* ================================================= */
 /* 背景色と矢印付きのボタン */
@@ -180,6 +233,68 @@ a {
 
 
 /* ================================================= */
+/* メンバー紹介 */
+/* ================================================= */
+
+.member-profile {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.member-profile h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.member-profile p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.member-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.member-links li {
+    display: inline-block;
+    background-color: #fefefe;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.member-links a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #0077cc;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-links a:hover {
+    background-color: #0077cc;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
+}
+
+
+/* ================================================= */
 /* レスポンシブデザイン */
 /* ================================================= */
 
@@ -192,9 +307,7 @@ a {
     .responsive {
         width: 100%;
         margin: auto;
-        /* 左右のマージンを自動で設定し中央揃えに */
         display: block;
-        /* 画像をブロックレベル要素として扱う */
     }
 
     /* ボタンのサイズを調整 */
@@ -233,124 +346,22 @@ a {
         padding-left: 0;
         /* スマートフォン表示では左のパディングをリセット */
     }
-}
 
 
-/* ================================================= */
-/* タブボタン */
-/* ================================================= */
+    .member-profile {
+        font-size: 0.8em;
+    }
 
-.tab {
-    overflow: hidden;
-    background-color: #f4f5f7;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
-    border-radius: 8px 8px 0 0;
-}
+    .member-profile h2 {
+        font-size: 1.5em;
+    }
 
-.tab button {
-    background-color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 20px;
-    font-size: 17px;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    border-radius: 8px 8px 0 0;
-    margin-right: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    .member-profile p {
+        font-size: 1em;
+        color: #777;
+        margin-bottom: 20px;
+    }
 
-.tab button:hover {
-    background-color: #0077cc;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.tab button.active {
-    background-color: #0077cc;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-/* Updated Tab Content */
-.tabcontent {
-    display: none;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 8px 8px;
-    border: 1px solid #ddd;
-    margin-top: -1px;
-}
-
-
-/* ================================================= */
-/* メンバー紹介 */
-/* ================================================= */
-
-.member-profile {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.member-profile h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.member-profile p {
-    font-size: 1.2em;
-    color: #777;
-    margin-bottom: 20px;
-}
-
-.member-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.member-links li {
-    display: inline-block;
-    background-color: #fefefe;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-    margin-bottom: 10px;
-}
-
-.member-links a {
-    font-size: 1.1em;
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: 2px solid #0077cc;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.member-links a:hover {
-    background-color: #0077cc;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
-}
-
-
-@media (max-width: 600px) {
     .member-links {
         display: block;
         text-align: center;
