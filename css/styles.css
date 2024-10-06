@@ -2,7 +2,7 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 40px;
     color: #333;
-    background-color: #f4f5f7;
+    background-color: #fff;
     font-size: 1.25em;
     line-height: 2em;
 }
@@ -12,6 +12,13 @@ header {
     text-align: center;
 }
 
+.sub-header p {
+    font-size: 0.8em;
+    color: #555;
+    text-align: center;
+    line-height: 1.2em;
+}
+
 footer {
     margin-top: 40px;
     font-size: 0.9em;
@@ -19,7 +26,6 @@ footer {
 }
 
 h1 {
-    color: #333;
     border-bottom: 2px solid #ddd;
     padding-bottom: 15px;
     margin-bottom: 20px;
@@ -284,10 +290,10 @@ a {
 /* ================================================= */
 
 .member-profile {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
