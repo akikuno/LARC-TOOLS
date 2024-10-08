@@ -1,39 +1,54 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 40px;
     color: #333;
-    background-color: #fff;
+    background-color: #f7f7f7;
     font-size: 1.25em;
     line-height: 2em;
 }
 
-header {
-    font-size: 0.8em;
-    text-align: center;
-}
-
-.sub-header p {
-    color: #555;
-    text-align: center;
-    line-height: 1.2em;
-}
-
-footer {
-    margin-top: 40px;
-    font-size: 0.9em;
-    text-align: center;
-}
 
 h1 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 h2 {
     font-weight: bold;
     font-size: 1.5em;
 }
+
+header {
+    background-color: #0077cc;
+    color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: normal;
+    color: #f7f7f7;
+    line-height: 1.2em;
+}
+
+.sub-header p {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
 
 ul {
     list-style-type: none;
@@ -52,6 +67,7 @@ li {
 /* ================================================= */
 /* リンクハイライト */
 /* ================================================= */
+
 a {
     color: #0077cc;
     text-decoration: none;
@@ -192,6 +208,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* 1番目のカラムに配置 */
