@@ -146,56 +146,43 @@ a {
 
 
 /* ================================================= */
-/* 背景色と矢印付きのボタン */
+/* リンクボタン */
 /* ================================================= */
 
-.button01 a {
-    background: #eee;
-    border-radius: 3px;
-    position: relative;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0;
-    min-width: 280px;
-    padding: 10px 25px;
-    color: #313131;
-    transition: 0.3s ease-in-out;
-    font-weight: 500;
+.link-button a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid #0077cc;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button01 a:hover {
-    background: #0077cc;
-    color: #fff;
+.link-button a:hover {
+    background-color: #0077cc;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
 }
 
-.button01 a:after {
-    content: "";
-    width: 5px;
-    height: 5px;
-    border-top: 3px solid #333;
-    border-right: 3px solid #333;
-    transform: rotate(45deg) translateY(-50%);
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    border-radius: 1px;
-    transition: 0.3s ease-in-out;
-}
-
-.button01 a:hover:after {
-    border-color: #fff;
-}
-
-/* 水平方向にリンクを配置するための追加のCSS */
-.button01 .horizontal-links {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.button01 .horizontal-links a:not(:last-child) {
+.link-button .horizontal-links a {
     margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.link-button .horizontal-links a:last-child {
+    margin-right: 0px;
+}
+
+.link-button li {
+    display: inline-block;
+    background-color: #fefefe;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    margin-bottom: 10px;
 }
 
 /* ================================================= */
@@ -275,41 +262,6 @@ a {
     margin-bottom: 20px;
 }
 
-.member-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.member-links li {
-    display: inline-block;
-    background-color: #fefefe;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-    margin-bottom: 10px;
-}
-
-.member-links a {
-    color: #0077cc;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: 2px solid #0077cc;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.member-links a:hover {
-    background-color: #0077cc;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
-}
-
-
 /* ================================================= */
 /* レスポンシブデザイン */
 /* ================================================= */
@@ -326,23 +278,24 @@ a {
         display: block;
     }
 
-    /* ボタンのサイズを調整 */
-    .button01 a {
-        min-width: 80%;
-    }
-
-    /* 水平方向にリンクを配置するための追加のCSS */
-    .button01 .horizontal-links {
+    .link-button {
         display: block;
-        /* flexからblockに変更して垂直方向に表示 */
+        text-align: center;
     }
 
-    .button01 .horizontal-links a:not(:last-child) {
-        margin-right: 0;
-        /* 水平方向の間隔を削除 */
-        margin-bottom: 10px;
-        /* 垂直方向の間隔を追加 */
+    .link-button li {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 10px 0;
     }
+
+    .link-button a {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+
 
     /* 「ツール一覧」を左右分割表示ではなく、一列に表示ためのCSS */
     .tool-item {
@@ -363,36 +316,4 @@ a {
         /* スマートフォン表示では左のパディングをリセット */
     }
 
-
-    .member-profile {
-        font-size: 0.8em;
-    }
-
-    .member-profile h2 {
-        font-size: 1.5em;
-    }
-
-    .member-profile p {
-        font-size: 1em;
-        color: #777;
-        margin-bottom: 20px;
-    }
-
-    .member-links {
-        display: block;
-        text-align: center;
-    }
-
-    .member-links li {
-        display: block;
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 10px 0;
-    }
-
-    .member-links a {
-        width: 90%;
-        display: block;
-        margin: 0 auto;
-    }
 }
