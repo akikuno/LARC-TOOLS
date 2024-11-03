@@ -265,6 +265,15 @@ a {
     margin-bottom: 20px;
 }
 
+.member-profile img.member-photo {
+    width: 150px;
+    /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    /* Make it circular */
+    margin-bottom: 10px;
+}
+
 /* ================================================= */
 /* レスポンシブデザイン */
 /* ================================================= */
