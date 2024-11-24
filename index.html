@@ -370,8 +370,18 @@
         </footer>
     </div>
 
+
+    <!--  ================================================== -->
+    <!--  JavaScript -->
+    <!--  ================================================== -->
+
     <script>
         function openTab(evt, tabName) {
+            // リンクのデフォルト動作を防ぐ（画面がスクロールしないようにする）
+            if (evt) {
+                evt.preventDefault();
+            }
+
             // Hide all tab content
             var tabcontent = document.getElementsByClassName("tabcontent");
             for (var i = 0; i < tabcontent.length; i++) {
@@ -386,13 +396,39 @@
 
             // Show the current tab's content and add "active" class to the clicked tab
             document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+            if (evt) {
+                evt.currentTarget.className += " active";
+            }
+
+            // Update the URL hash without scrolling
+            history.replaceState(null, null, `#${tabName.toLowerCase()}`);
         }
 
-        // Set default tab to open (e.g., "Tools")
+        // Set the default tab based on the URL hash or open "Tools" by default
         document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("Tools").style.display = "block";
+            var hash = window.location.hash.slice(1); // Remove the "#" character
+            var validTabs = ["tools", "news", "members", "links"]; // Define valid tab IDs
+            if (validTabs.includes(hash)) {
+                document.getElementById(hash.charAt(0).toUpperCase() + hash.slice(1)).style.display = "block";
+                var button = document.querySelector(`.tablinks[onclick*="${hash.charAt(0).toUpperCase() + hash.slice(1)}"]`);
+                if (button) {
+                    button.className += " active";
+                }
+            } else {
+                document.getElementById("Tools").style.display = "block"; // Default tab
+                document.querySelector(`.tablinks[onclick*="Tools"]`).className += " active";
+            }
         });
+
+        // Listen for hash changes (optional: in case the URL hash is changed manually)
+        window.addEventListener("hashchange", function () {
+            var hash = window.location.hash.slice(1); // Remove the "#" character
+            var validTabs = ["tools", "news", "members", "links"]; // Define valid tab IDs
+            if (validTabs.includes(hash)) {
+                openTab(null, hash.charAt(0).toUpperCase() + hash.slice(1));
+            }
+        });
+
     </script>
 
 </body>
