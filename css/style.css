@@ -328,4 +328,9 @@ a {
         /* スマートフォン表示では左のパディングをリセット */
     }
 
+    .scrollable-list {
+        overflow-y: hidden;
+        height: auto;
+        /* Newsのスクロール付をオフにする */
+    }
 }
