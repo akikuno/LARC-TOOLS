@@ -17,6 +17,7 @@ fetch('./html/news.html')
     })
     .catch(error => console.error('Error loading news.html:', error));
 
+
 fetch('./html/members.html')
     .then(response => response.text())
     .then(data => {
