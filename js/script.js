@@ -9,6 +9,15 @@ fetch('./html/tools.html')
     })
     .catch(error => console.error('Error loading tools.html:', error));
 
+
+    
+fetch('./html/links.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('links-html').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading links.html:', error));
+
 // ############################################################
 // タブ切り替え操作
 // ############################################################
