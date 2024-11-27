@@ -10,7 +10,14 @@ fetch('./html/tools.html')
     .catch(error => console.error('Error loading tools.html:', error));
 
 
-    
+fetch('./html/members.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('members-html').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading members.html:', error));
+
+
 fetch('./html/links.html')
     .then(response => response.text())
     .then(data => {
