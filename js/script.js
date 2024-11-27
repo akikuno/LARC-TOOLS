@@ -1,3 +1,17 @@
+// ############################################################
+// HTMLファイルの読み込み
+// ############################################################
+
+fetch('./html/tools.html.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('tools-html').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading tools.html:', error));
+
+// ############################################################
+// タブ切り替え操作
+// ############################################################
 
 function openTab(evt, tabName) {
     // リンクのデフォルト動作を防ぐ（画面がスクロールしないようにする）
