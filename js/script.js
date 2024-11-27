@@ -10,6 +10,13 @@ fetch('./html/tools.html')
     .catch(error => console.error('Error loading tools.html:', error));
 
 
+fetch('./html/news.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('news-html').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading news.html:', error));
+
 fetch('./html/members.html')
     .then(response => response.text())
     .then(data => {
