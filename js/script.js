@@ -2,7 +2,7 @@
 // HTMLファイルの読み込み
 // ############################################################
 
-fetch('../html/tools.html.html')
+fetch('./html/tools.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('tools-html').innerHTML = data;
