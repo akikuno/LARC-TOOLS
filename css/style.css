@@ -25,6 +25,22 @@ header {
     text-align: center;
 }
 
+/* デフォルト (スマホ向け) */
+.header-image {
+    width: 100%;
+    max-width: 300px;
+    /* スマホでは適切なサイズ */
+    margin: 0 auto;
+}
+
+/* PC向け */
+@media (min-width: 600px) {
+    .header-image {
+        max-width: 700px;
+        /* PCでは適切なサイズに縮小 */
+    }
+}
+
 footer {
     color: #333;
     padding: 10px;
