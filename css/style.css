@@ -133,13 +133,12 @@ a {
 }
 
 .tab button {
+    font-size: 18px;
     color: #333;
     background-color: #fff;
     border: 2px solid #ddd;
-    outline: none;
     cursor: pointer;
     padding: 14px 20px;
-    font-size: 17px;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
     border-radius: 10px;
     margin: 10px;
@@ -178,26 +177,26 @@ a {
 }
 
 .link-button a {
+    font-size: 1.1em;
+    border: 2px solid #DDD;
+    border-radius: 10px;
     text-decoration: none;
     padding: 10px 10px;
     margin-bottom: 5px;
-    border: 2px solid #EEE;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
     text-align: center;
     width: fit-content;
     white-space: normal;
     line-height: 1.5;
     overflow-wrap: break-word;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .link-button a:hover {
+    color: #fff;
     background-color: #ff9d00;
     border-color: #ff9d00;
-    color: #FFF;
 }
-
 
 
 /* ================================================= */
@@ -236,10 +235,6 @@ a {
 /* ================================================= */
 /* 新着情報 */
 /* ================================================= */
-.news-date {
-    font-weight: bold;
-    font-size: 1.5em;
-}
 
 .scrollable-list {
     height: 1000px;
