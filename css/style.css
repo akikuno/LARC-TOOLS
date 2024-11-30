@@ -78,16 +78,15 @@ a {
     color: #333;
     text-decoration: none;
     border-bottom: solid 2px;
-    font-weight: bold;
 }
 
-.text_link {
+.text-link {
     display: inline;
     padding: 0.1em 0.3em;
     transition: all 0.3s;
 }
 
-.text_link:hover {
+.text-link:hover {
     color: #E66E06;
 }
 
@@ -244,6 +243,7 @@ a {
     height: 1000px;
     overflow-y: auto;
 }
+
 
 .scrollable-list li p {
     margin-bottom: 10px;
