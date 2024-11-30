@@ -168,6 +168,14 @@ a {
 /* ================================================= */
 /* リンクボタン */
 /* ================================================= */
+
+.link-button {
+    display: block;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .link-button a {
     text-decoration: none;
     padding: 10px 10px;
@@ -181,16 +189,6 @@ a {
     white-space: normal;
     line-height: 1.5;
     overflow-wrap: break-word;
-}
-
-.link-button {
-    display: flex;
-    flex-wrap: wrap;
-    /* ボタンを折り返し可能にする */
-    gap: 10px;
-    /* ボタン間の間隔を確保 */
-    align-items: flex-start;
-    /* ボタンの位置を揃える */
 }
 
 .link-button a:hover {
@@ -225,6 +223,13 @@ a {
 .tool-buttons {
     grid-column: 2;
     padding-left: 20px;
+}
+
+.tool-buttons .link-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
 }
 
 /* ================================================= */
