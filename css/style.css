@@ -1,3 +1,6 @@
+/* ================================================= */
+/* 共通設定 */
+/* ================================================= */
 html {
     scroll-behavior: smooth;
 }
@@ -6,47 +9,30 @@ body {
     font-family: Poppins, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 40px;
     color: #333;
-    background-color: #f7f7f7;
+    background-color: #FAF8F3;
     font-size: 1.25em;
     line-height: 2em;
 }
 
+/* ================================================= */
+/* タイポグラフィ */
+/* ================================================= */
+h1, h2 {
+    font-weight: bold;
+}
 
 h1 {
-    font-weight: bold;
     font-size: 2em;
 }
 
 h2 {
-    font-weight: bold;
     font-size: 1.5em;
 }
 
+/* ================================================= */
+/* ヘッダーとフッター */
+/* ================================================= */
 header {
-    /* background-color: #DDD; */
-    /* color: #f7f7f7; */
-    padding: 10px;
-    text-align: center;
-}
-
-/* デフォルト (スマホ向け) */
-.header-image {
-    width: 100%;
-    max-width: 300px;
-    /* スマホでは適切なサイズ */
-    margin: 0 auto;
-}
-
-/* PC向け */
-@media (min-width: 600px) {
-    .header-image {
-        max-width: 700px;
-        /* PCでは適切なサイズに縮小 */
-    }
-}
-
-footer {
-    color: #333;
     padding: 10px;
     text-align: center;
 }
@@ -57,19 +43,26 @@ header h1 {
     line-height: 1.2em;
 }
 
+footer {
+    color: #333;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ================================================= */
+/* サブヘッダー */
+/* ================================================= */
 .sub-header p {
     font-size: 0.9em;
     line-height: 1.2em;
     text-align: center;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-}
-
-
+/* ================================================= */
+/* リスト */
+/* ================================================= */
 ul {
     list-style-type: none;
     padding: 0;
@@ -83,13 +76,11 @@ li {
     margin-bottom: 20px;
 }
 
-
 /* ================================================= */
 /* リンクハイライト */
 /* ================================================= */
-
 a {
-    color: #0077cc;
+    color: #333;
     text-decoration: none;
     border-bottom: solid 2px;
     font-weight: bold;
@@ -102,20 +93,33 @@ a {
 }
 
 .text_link:hover {
-    color: #fff;
-    background-color: #0077cc;
+    color: #E66E06;
 }
 
-
-
 /* ================================================= */
-/* 大型モニターに対応 */
+/* レイアウト用コンテナ */
 /* ================================================= */
-
 .container {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+/* ================================================= */
+/* レスポンシブデザイン */
+/* ================================================= */
+/* デフォルト (スマホ向け) */
+.header-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* PC向け */
+@media (min-width: 600px) {
+    .header-image {
+        max-width: 900px;
+    }
 }
 
 /* ================================================= */
@@ -123,15 +127,15 @@ a {
 /* ================================================= */
 
 .tab {
+    background-color: #fff;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow: hidden;
-    background-color: #eee;
     padding: 5px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
-    border-radius: 8px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
 }
 
 .tab button {
@@ -142,29 +146,28 @@ a {
     padding: 14px 20px;
     font-size: 17px;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 10px;
     margin: 10px;
 }
 
 .tab button:hover {
-    background-color: #0077cc;
     color: #fff;
-    border-color: #0077cc;
+    background-color: #ff9d00;
+    border-color: #ff9d00;
 }
 
 .tab button.active {
-    background-color: #0077cc;
     color: #fff;
-    border-color: #0077cc;
+    background-color: #E66E06;
+    border-color: #E66E06;
 }
 
 .tabcontent {
     display: none;
     padding: 20px;
     background-color: #fff;
-    border-radius: 0 0 8px 8px;
-    border: 1px solid #ddd;
-    margin-top: -1px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
 }
 
 
@@ -173,19 +176,17 @@ a {
 /* ================================================= */
 
 .link-button a {
-    color: #0077cc;
+    /* color: #ff9d00; */
     text-decoration: none;
-    font-weight: 600;
     padding: 10px 20px;
-    border: 2px solid #0077cc;
-    border-radius: 50px;
+    border: 2px solid #EEE;
+    border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .link-button a:hover {
-    background-color: #0077cc;
+    background-color: #ff9d00;
     color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
 }
 
 .link-button .horizontal-links a {
@@ -375,7 +376,7 @@ a {
     z-index: 2;
 }
 
-.pagetop__arrow {
+.pagetop_arrow {
     height: 10px;
     width: 10px;
     border-top: 3px solid #000;
