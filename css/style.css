@@ -133,6 +133,7 @@ a {
 }
 
 .tab button {
+    color: #333;
     background-color: #fff;
     border: 2px solid #ddd;
     outline: none;
