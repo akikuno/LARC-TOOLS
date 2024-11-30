@@ -123,14 +123,14 @@ a {
 
 .tab {
     background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow: hidden;
     padding: 5px;
     margin-bottom: 20px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
 }
 
 .tab button {
