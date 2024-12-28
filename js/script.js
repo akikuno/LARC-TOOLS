@@ -76,7 +76,7 @@ function openTab(evt, tabName) {
 document.addEventListener("DOMContentLoaded", function () {
     // URLのハッシュを取得
     var hash = window.location.hash.slice(1); // "#" を除去
-    var validTabs = ["tools", "news", "members", "links"]; // 有効なタブID
+    var validTabs = ["tools", "news", "members", "publications", "links"]; // 有効なタブID
 
     // ハッシュが有効なタブIDの場合のみ適用
     if (validTabs.includes(hash)) {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ハッシュ変更時の処理
 window.addEventListener("hashchange", function () {
     var hash = window.location.hash.slice(1); // "#" を除去
-    var validTabs = ["tools", "news", "members", "links"]; // 有効なタブID
+    var validTabs = ["tools", "news", "members", "publications", "links"]; // 有効なタブID
 
     // ハッシュが有効なタブIDの場合のみ適用
     if (validTabs.includes(hash)) {
