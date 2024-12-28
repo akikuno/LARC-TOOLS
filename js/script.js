@@ -26,6 +26,14 @@ fetch('./html/members.html')
     .catch(error => console.error('Error loading members.html:', error));
 
 
+fetch('./html/publications.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('publications-html').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading publications.html:', error));
+
+
 fetch('./html/links.html')
     .then(response => response.text())
     .then(data => {
