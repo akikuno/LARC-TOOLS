@@ -1,6 +1,14 @@
-/* ================================================= */
-/* レスポンシブデザイン */
-/* ================================================= */
+.tab {
+    justify-content: space-between;
+}
+
+.tab button {
+    flex: 1 1 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px);
+    text-align: center;
+}
+
+
 .header-image {
     max-width: 900px;
 }
