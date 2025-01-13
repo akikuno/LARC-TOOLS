@@ -1,19 +1,13 @@
 .tab {
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
 .tab button {
-    flex: 1 1 calc(33.333% - 10px);
-    max-width: calc(33.333% - 10px);
+    flex: 0 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
     text-align: center;
-}
-
-
-.header-image {
-    max-width: 900px;
-}
-
-/* デフォルトの幅を広く設定 */
-.responsive {
-    width: 80%;
+    margin: 0;
 }
