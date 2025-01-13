@@ -1,0 +1,25 @@
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    /* 必要に応じて折り返し */
+    gap: 10px;
+    /* ボタン間のスペース */
+    justify-content: space-between;
+    /* 均等に配置 */
+    max-width: 100%;
+    /* タブ全体の幅を制限 */
+    background-color: lightblue;
+    /* デバッグ用 */
+}
+
+.tab button {
+    flex: 0 0 calc(33.333% - 10px);
+    /* 各ボタンを3分割に */
+    max-width: calc(33.333% - 10px);
+    /* 最大幅を指定 */
+    text-align: center;
+    box-sizing: border-box;
+    /* パディングやボーダーを幅に含める */
+    background-color: orange;
+    /* デバッグ用 */
+}

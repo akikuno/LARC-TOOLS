@@ -1,0 +1,201 @@
+/* ================================================= */
+/* 共通設定 */
+/* ================================================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", "BIZ UDPGothic", sans-serif;
+    margin: 40px;
+    color: #333;
+    background-color: #FAF8F3;
+    font-size: 1.25em;
+    line-height: 2em;
+}
+
+/* ================================================= */
+/* タイポグラフィ */
+/* ================================================= */
+h1,
+h2 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+/* ================================================= */
+/* ヘッダーとフッター */
+/* ================================================= */
+header {
+    text-align: center;
+}
+
+footer {
+    color: #333;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ================================================= */
+/* サブヘッダー */
+/* ================================================= */
+.sub-header p {
+    font-size: 0.9em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+/* ================================================= */
+/* リスト */
+/* ================================================= */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* ================================================= */
+/* リンクハイライト */
+/* ================================================= */
+a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: solid 2px;
+}
+
+.text-link {
+    display: inline;
+    padding: 0.1em 0.3em;
+    transition: all 0.3s;
+}
+
+.text-link:hover {
+    color: #E66E06;
+}
+
+/* ================================================= */
+/* レイアウト用コンテナ */
+/* ================================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ================================================= */
+/* タブボタン */
+/* ================================================= */
+.tab {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.tab button {
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.tab button:hover {
+    background-color: #ffc66b;
+    border-color: #ffc66b;
+}
+
+.tab button.active {
+    color: #fff;
+    background-color: #ff9d00;
+    border-color: #ff9d00;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* ================================================= */
+/* ツール一覧 */
+/* ================================================= */
+.tool-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-items: start;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tool-description {
+    grid-column: 1;
+    padding: 20px;
+}
+
+.tool-buttons {
+    grid-column: 2;
+    padding-left: 20px;
+}
+
+/* ================================================= */
+/* メンバー紹介 */
+/* ================================================= */
+.member-profile {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-profile h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.member-profile p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.member-profile img.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
