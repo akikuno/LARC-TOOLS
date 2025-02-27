@@ -100,20 +100,13 @@ a {
 }
 
 /* ================================================= */
-/* レスポンシブデザイン */
+/* ヘッダーイメージ */
 /* ================================================= */
-/* デフォルト (スマホ向け) */
+
 .header-image {
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-/* PC向け */
-@media (min-width: 600px) {
-    .header-image {
-        max-width: 900px;
-    }
+    height: auto;
+    display: block;
 }
 
 /* ================================================= */
@@ -124,11 +117,11 @@ a {
     background-color: #fff;
     border: 2px solid #ddd;
     border-radius: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 20px;
 }
 
@@ -141,7 +134,6 @@ a {
     padding: 14px 20px;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
     border-radius: 10px;
-    margin: 10px;
 }
 
 .tab button:hover {
@@ -289,6 +281,34 @@ a {
     margin-bottom: 10px;
 }
 
+
+/* ================================================= */
+/* 追従するトップへ戻るボタン */
+/* ================================================= */
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop_arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+}
+
+
 /* ================================================= */
 /* レスポンシブデザイン */
 /* ================================================= */
@@ -298,6 +318,7 @@ a {
     width: 80%;
 }
 
+/* スマートフォン用のサイズ */
 @media (max-width: 600px) {
     .responsive {
         width: 100%;
@@ -332,6 +353,13 @@ a {
 
 
     /* ================================================= */
+    /* 「タブ」を3列ではなく、1列に表示ためのCSS */
+    /* ================================================= */
+    .tab {
+        grid-template-columns: 1fr;
+    }
+
+    /* ================================================= */
     /* 「ツール一覧」を左右分割表示ではなく、一列に表示ためのCSS */
     /* ================================================= */
     .tool-item {
@@ -359,31 +387,4 @@ a {
     }
 
 
-}
-
-
-/* ================================================= */
-/* 追従するトップへ戻るボタン */
-/* ================================================= */
-.pagetop {
-    height: 50px;
-    width: 50px;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    background: #fff;
-    border: solid 2px #000;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-.pagetop_arrow {
-    height: 10px;
-    width: 10px;
-    border-top: 3px solid #000;
-    border-right: 3px solid #000;
-    transform: translateY(20%) rotate(-45deg);
 }
